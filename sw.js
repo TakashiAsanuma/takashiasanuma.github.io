@@ -5,7 +5,7 @@ var urlsToCache = [
   '/zigexnbu_2.jepg'
 ];
 
-self.addEventListener('install', function(event) {
+self.oninstall = function(event) {
   // インストール処理
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -14,6 +14,6 @@ self.addEventListener('install', function(event) {
         return cache.addAll(urlsToCache);
       })
   );
-});
+};
 
 
