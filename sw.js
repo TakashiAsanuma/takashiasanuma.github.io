@@ -2,7 +2,7 @@
 
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-  '/zigexnbu_2.jepg',
+  '/zigexnbu_2.jepg'
 ];
 
 self.addEventListener('install', function(event) {
