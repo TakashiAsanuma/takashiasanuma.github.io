@@ -6,7 +6,6 @@ var urlsToCache = [
 ];
 
 self.oninstall = function(event) {
-  // インストール処理
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
