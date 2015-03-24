@@ -1,11 +1,9 @@
 //service worker
 
 var CACHE_NAME = 'my-site-cache-v1';
-var urlsToCache = [
-  'zigexnbu_2.jpeg'
-];
+var urlsToCache = '';
 
-self.oninstall = function(event) {
+self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
@@ -13,4 +11,4 @@ self.oninstall = function(event) {
         return cache.addAll(urlsToCache);
       })
   );
-};
+});
