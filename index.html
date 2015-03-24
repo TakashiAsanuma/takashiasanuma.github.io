@@ -1,1 +1,21 @@
-Hello GitHub Pages
+<!DOCTYPE html>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf8'>
+  <script>
+    if (navigator.serviceWorker) {
+      // sw.jsをService Workerとして登録する
+      navigator.serviceWorker.register('./sw.js', {
+        scope: '/'
+      }).then(function onFulfilled () {
+        // sw.jsがひと通り評価され、インストールが成功した場合
+        console.log('Service Worker was installed.');
+      }, function onRejected () {
+        // sw.jsのインストールが失敗した場合
+        console.log('Service Worker was not installed.');
+      });
+    }
+  </script>
+</head>
+<body>
+  Hello GitHub Pages
+</body>
