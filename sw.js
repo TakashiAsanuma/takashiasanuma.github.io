@@ -6,6 +6,7 @@ var urlsToCache = [
 ];
 
 self.addEventListener('install', function(event) {
+  console.log('ServiceWorker.oninstall: ', e);
   // インストール処理
   event.waitUntil(
     caches.open(CACHE_NAME)
