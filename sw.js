@@ -19,9 +19,11 @@ self.addEventListener('fetch', function(event) {
       .then(function(response) {
         // キャッシュがあったのでそのレスポンスを返す
         if (response) {
+          console.log('Return cache');
           return response;
         }
 
+        console.log('Return no cache');
         return fetch(event.request);
       })
   );
