@@ -24,6 +24,11 @@ self.addEventListener('fetch', function(event) {
       .then(function(response) {
         // キャッシュがあったのでそのレスポンスを返す
         if (response) {
+          if (event.request.url.toLowerCase().indexOf('zigexnbu_1.jpeg') != -1) {
+            console.log('zigexnbu');
+            event.respondWith(caches.match('zigexnbu_2.jpeg'));
+            return;
+          }
           console.log('cache');
           return response;
         }
